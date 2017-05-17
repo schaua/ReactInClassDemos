@@ -1,14 +1,18 @@
 import React from 'react';
 
 class Child extends React.Component{
+    // constructor(){
+    //     super();
+    // }
+
     render() {
         return (
             <div className="row col-md-4 col-md-offset-4" style={{border: '1px solid black', backgroundColor: 'pink'}}>
                 Controlled:
-            <input value={this.props.text}/>
+            <input onChange={this.props.onChanged} value={this.props.text}/>
             <br/>
-            Uncontrolled:
-            <input placeholder="Enter text here"/>
+            Controlled:
+            <input placeholder="Enter text here" value={this.props.text}/>
             </div>
         );
     }

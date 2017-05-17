@@ -5,16 +5,20 @@ import Child from './child';
 class Parent extends React.Component{
     constructor(props){
         super(props);
+        this.inputChangedHandler = this.inputChangedHandler.bind(this);
         this.state = {
             firstDancer: "Fred",
             secondDancer: "Ginger",
             chorusLine: ["Alice", "Betty", "Carol"]
         };
     }
+    inputChangedHandler(event){
+        this.setState({firstDancer: event.target.value})
+    }
     render() {
         return (
             <div>
-                <Child text={this.state.firstDancer} other={this.props.text} >
+                <Child onChanged={this.inputChangedHandler} text={this.state.firstDancer} other={this.props.text} >
                     <div>
                     </div> 
                     <p>Dances well</p>
