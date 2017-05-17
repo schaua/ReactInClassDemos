@@ -18,13 +18,12 @@ class Parent extends React.Component{
     render() {
         return (
             <div>
-                <Child onChanged={this.inputChangedHandler} text={this.state.firstDancer} other={this.props.text} >
+                <Child 
+                onChange={this.inputChangedHandler} 
+                text={this.state.firstDancer} >
                     <div>
                     </div> 
                     <p>Dances well</p>
-                </Child>
-                <Child text={this.state.chorusLine[0]}>
-                    <button></button>
                 </Child>
             </div>
         );

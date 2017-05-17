@@ -9,10 +9,10 @@ class Child extends React.Component{
         return (
             <div className="row col-md-4 col-md-offset-4" style={{border: '1px solid black', backgroundColor: 'pink'}}>
                 Controlled:
-            <input onChange={this.props.onChanged} value={this.props.text}/>
-            <br/>
-            Controlled:
-            <input placeholder="Enter text here" value={this.props.text}/>
+                <input 
+                onChange={this.props.onChange} 
+                value={this.props.text}/>
+                <span>{this.props.text}</span>
             </div>
         );
     }

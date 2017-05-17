@@ -5,9 +5,9 @@ class AppBody extends React.Component {
     render() {
         return (
         <form>
-            <p className="App-intro">
+            <div className="App-intro">
                 <Parent text={this.props.myState}/>
-            </p>
+            </div>
             <button onClick={this.props.onClick}>{this.props.myState}</button>
         </form>
         );
