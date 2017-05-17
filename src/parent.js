@@ -14,12 +14,12 @@ class Parent extends React.Component{
     render() {
         return (
             <div>
-                <Child text={this.state.firstDancer}>
+                <Child text={this.state.firstDancer} other={this.props.text} >
                     <div>
                     </div> 
                     <p>Dances well</p>
                 </Child>
-                <Child text={this.state.chorusLine[1]}>
+                <Child text={this.state.chorusLine[0]}>
                     <button></button>
                 </Child>
             </div>

@@ -4,12 +4,12 @@ import Parent from './parent';
 class AppBody extends React.Component {
     render() {
         return (
-        <div>
+        <form>
             <p className="App-intro">
-                <Parent />
+                <Parent text={this.props.myState}/>
             </p>
             <button onClick={this.props.onClick}>{this.props.myState}</button>
-        </div>
+        </form>
         );
     }    
 }
