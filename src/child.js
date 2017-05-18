@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Child extends React.Component{
     // constructor(){
     //     super();
     // }
-
     render() {
         return (
             <div className="row col-md-4 col-md-offset-4" style={{border: '1px solid black', backgroundColor: 'pink'}}>
@@ -16,6 +16,11 @@ class Child extends React.Component{
             </div>
         );
     }
+}
+
+Child.propTypes = {
+    text: PropTypes.string.isRequired,
+    onChange: PropTypes.func
 }
 
 export default Child;
